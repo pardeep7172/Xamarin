@@ -1,0 +1,24 @@
+using System;
+namespace helllWorldApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter Meter Reading");
+            int meter = int.Parse(Console.ReadLine());
+            if(meter>100)
+            {
+                double bill = (100 * 5.95) + ((meter - 100) * 6.95);
+                Console.WriteLine("Total Bill is:" + bill);
+            }
+            else
+            {
+                double bill = meter * 5.95;
+                Console.WriteLine("Total Bill is:" + bill);
+            }
+            
+            Console.ReadKey();
+        }
+    }
+}
