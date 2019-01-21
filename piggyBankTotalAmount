@@ -1,0 +1,22 @@
+using System;
+namespace helllWorldApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter num of 10 Rs Coins");
+            int num1 = int.Parse(Console.ReadLine());
+             Console.WriteLine("Enter no. of 5 Rs coins");
+            int num2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter no. of 2 Rs coins");
+            int num3 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter no. of 1 Rs coins");
+            int num4 = int.Parse(Console.ReadLine());
+
+            int totalamount = (num1 * 10) + (num2 * 5) + (num3 * 2) + num4;
+            Console.WriteLine("Result is:" + totalamount);
+            Console.ReadKey();
+        }
+    }
+}
