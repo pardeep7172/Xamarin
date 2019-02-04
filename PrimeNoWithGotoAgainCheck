@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LabEva1Practice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           again: Console.WriteLine("Enter number to check Prime Or not");
+
+            int n = int.Parse(Console.ReadLine());
+            int flag = 0;
+            for(int i=2;i<n;i++)
+            {
+                if(n%i==0)
+                {
+                    flag = 1;
+                    break;
+                }
+                 
+            }
+            if(flag==1)
+            {
+                Console.WriteLine("Given number is not Prime !!");
+            }
+            else
+            {
+                Console.WriteLine("Given number is prime !!");
+            }
+            Console.WriteLine("For Stop Enter 0  Or Enter another !!");
+            n = int.Parse(Console.ReadLine());
+            if(n!= 0)
+            {
+                goto again;
+            }
+            else
+            {
+                System.Environment.Exit(0);
+            }
+            Console.ReadKey();
+        }
+    }
+}
