@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp4.Page3"
+             BackgroundColor="Color.Blue">
+  <ContentPage.Content> 
+    <StackLayout x:Name="mainstack">
+      <StackLayout Padding="300" Margin="0,20,0,0">
+        <Label Text="User Name" TextColor="Color.Yellow" FontSize="30"></Label>
+        <Entry Text="" Placeholder="username"></Entry>
+        <Label Text="Password" FontSize="30"></Label>
+        <Entry Text="" Placeholder="Password" IsPassword="True"></Entry>
+        <Button Text="Login" BackgroundColor="Color.White" TextColor="Color.Black" Clicked="LoginBtn"></Button>
+        <Label Text="Not a member ? Sign up now !" TextColor="Color.Gray" FontSize="25"></Label>
+      </StackLayout> 
+  </StackLayout>
+  </ContentPage.Content>
+
+</ContentPage>
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using Xamarin.Forms;
+
+namespace MyApp4
+{
+    public partial class Page3 : ContentPage
+    {
+        public Page3()
+        {
+            InitializeComponent();
+        }
+        private void LoginBtn(object sender, EventArgs e)
+        {
+            DisplayAlert("Login", "Login Sucessfull", "Ok");
+           
+            //Code for Navigation Page/// Write in App.xaml.cs  MainPage = new NavigationPage(new Page3());
+        }
+        
+    }
+}
